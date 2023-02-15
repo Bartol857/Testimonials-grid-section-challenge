@@ -1,0 +1,92 @@
+@use './colors' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: $lightgrayishblue;
+	font-family: 'Barlow Semi Condensed', sans-serif;
+	font-size: 13px;
+}
+
+.testimonials {
+	display: grid;
+    gap: 30px;
+	margin: 80px 30px;
+
+	&__box {
+		padding: 30px;
+		background-color: rgb(15, 56, 56);
+		border-radius: 8px;
+		color: $white;
+	}
+
+	&__author {
+		display: flex;
+
+		img {
+            border: 2px solid $verydarkgrayishblue;
+			border-radius: 50%;
+			width: 30px;
+		}
+	}
+
+	&__name {
+        margin-left: 20px;
+
+        span{
+            font-size: 11px;
+            opacity: 0.4;
+        }
+	}
+
+	&__heading {
+		padding: 10px 0;
+		font-size: 20px;
+	}
+
+	&__description {
+		opacity: 0.7;
+		line-height: 18px;
+	}
+}
+
+.purple{
+    background-color: $moderateviolet;
+    background-image: url('../images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: top right 15%;
+}
+
+.gray{
+    background-color: $verydarkgrayishblue;
+}
+
+.black{
+    background-color: $verydarkblackishblue;
+}
+
+.white1, .white2{
+    background-color: $white;
+    color: $verydarkgrayishblue;
+}
+
+footer {
+	.attribution {
+		font-size: 11px;
+		text-align: center;
+		letter-spacing: 1px;
+	}
+
+	.attribution a {
+		color: $verydarkgrayishblue;
+	}
+}
+
+@import './tablet';
+@import './desktop';
